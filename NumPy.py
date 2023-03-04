@@ -47,6 +47,11 @@ disp("re-shape with shape")
 random.shape = (5,2)
 print(random)
 
+#reshape can be used to change the order of the array matrix
+disp("re-shape with reshape")
+reshape = arr.reshape((1,9))
+print(reshape)
+
 #size is used to find total number elements in the array
 disp("size")
 print(zero_mat.size)
