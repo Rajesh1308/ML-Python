@@ -34,11 +34,15 @@ disp("subtract")
 ans = np.subtract(arr,array)
 print(ans)
 
-# exp attribute  compute the power of one array elements to other only with float data type
+# exp attribute  compute the e power of array elements
 disp("exp")
-ans = np.exp(arr,array)
+ans = np.exp(arr)
 print(ans)
 
 disp("sin")
 ans = np.sin(arr)
+print(ans)
+
+disp("Multiply")
+ans = np.multiply(arr,array)
 print(ans)
