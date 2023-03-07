@@ -50,5 +50,38 @@ print(pd.concat([df1,dfa], axis=1,join="inner")) # A fun happens for array and d
 print(pd.concat([df1,df2], axis=1,join="inner")) # properly adds the data to the column since axis is set 1
 
 
+data = {"A" : [9,5,8] , "C" : [4,8,2]}
+df = pd.DataFrame(data)
+print("New dataframe 1\n",df)
 
+data = {"A" : [9,5,8] , "B" : [2,4,7]}
+df1 = pd.DataFrame(data)
+print("New dataframe 2\n",df1)
 
+####### MERGE ################
+# For a right merge, one column must be same in both dataframes
+
+print("Output of right merge on A")
+merge = pd.merge(df,df1,how="right")
+print(merge)
+
+print("Output of left merge on A")
+merge = pd.merge(df,df1,how="left")
+print(merge)
+
+data1 = {
+  "name": ["Sally", "Mary", "John"],
+  "age": [50, 40, 30]
+}
+
+data2 = {
+  "name": ["Sally", "Peter", "Micky"],
+  "age": [77, 44, 22]
+}
+
+df1 = pd.DataFrame(data1)
+df2 = pd.DataFrame(data2)
+
+newdf = pd.merge(df1,df2, how='right')
+
+print(newdf)
