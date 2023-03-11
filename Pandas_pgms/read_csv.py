@@ -62,3 +62,21 @@ print(covid)
 covid.Total_Recovered = covid.Total_Recovered.fillna(covid.Total_Recovered.mean())
 print(covid.info())
 
+#drop can remove a column
+#Example
+#   covid = covid.drop(columns=['Death'])
+
+corr = covid[['Total_Infected','Total_Deaths','Total_Recovered','Death','Recovered_%']].corr()
+print(corr)
+
+#iloc - index locator only integers has to be provided
+#syntax
+#  dafaframe.iloc[startrow:endrow,startcolumn:endcolumn]
+print(covid.iloc[0:8,2:9])
+
+# We can specify the value (as numbers) or directly names of rows or columns for loc fn
+print(covid.loc[0:20,'Total_Infected'])
+print(covid.loc[0:10,'Total_Infected':'Recovered_%'])
+
+
+
